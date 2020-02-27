@@ -39,99 +39,98 @@ function selectOption(option) {
 const textNodes = [
     {
         id: 1,
-        text: "You wake up in a strange place and you see a jar of blue goo near you.",
-        options: [
+        text: "Welcome to the Legend of Geo, a story based game where you are the main character. Click the option button below to start the game.",
+        options:[
             {
-                text: "Take goo",
-                setState: { blueGoo: true },
-                nextText: 2
-            },
-            {
-                text: "Leave the goo",
+                text: "Start",
                 nextText: 2
             }
-
         ]
     },
     {
         id: 2,
-        text: "You venture forth in search of answer to where you are when you come across a merchant.",
-        options: [
+        text: "Choose a character class. Some options and paths will only be allowed to certain classes.",
+        options:[
             {
-                text: "Trade the goo for a sword",
-                requireState: (currentState) => currentState.blueGoo,
-                setState: { blueGoo: false, sword: true },
+                text: "Knight",
+                setState: {knight:true},
+                nextText: 3,
+            },
+            {
+                text: "Rogue",
+                setState: {rogue: true},
                 nextText: 3
             },
             {
-                text: "Trade the good for a shield",
-                requireState: (currentState) => currentState.blueGoo,
-                setState: { blueGoo: false, shield: true },
+                text: "Archer",
+                setState: {archer: true},
                 nextText: 3
             },
             {
-                text: "Ignore the merchant",
+                text: "Mage",
+                setState: {mage:true},
                 nextText: 3
             }
         ]
     },
     {
         id: 3,
-        text: "After leaving the merchant, you start to feel tired and stumble upon a small town next to a dangerous looking castle.",
-        options: [
+        text: "You awaken from you mid-morning nap at the sound of nearby screaming. 'Monsters!' the screams shout. 'Monsters are attacking the capital!' ",
+        options:[
             {
-                text: "Explore the castle",
-                nextText: 4,
+                text: "Grab your wooden sword and shield as an aspiring Knight, even though you are just a squire",
+                requireState: (currentState) => currentState.knight,
+                nextText: 4
             },
             {
-                text: "Find a room to sleep at in the town",
-                nextText: 5,
+                text: "Ready your homemade bow and arrows, and hope that it doesn't break",
+                requireState: (currentState) => currentState.archer,
+                nextText: 4
             },
             {
-                text: "Find some hay in a stable to sleep in.",
-                nextText: 6
+                text: "Even though you much rather go back to sleep, you know that you need to practice your dagger handling skills more and and slaying a live monster is practical, and profitable",
+                requireState: (currentState) => currentState.rogue,
+                nextText: 4
             },
+            {
+                text: "Grab your staff and spellbook and user a teleport spell to the fight",
+                requireState: (currentState) => currentState.mage,
+                nextText: 4
+            },
+            {
+                text: "Look around for someone to help",
+                nextText: 4
+            },
+            {
+                text: "Go into town and see if the rumors are true. You've never seen monsters in real life before",
+                nextText: 4
+            },
+            {
+                text: "Run away from the sounds of screams. You know you are know match for real, live monsters",
+                nextText: 5
+            }
         ]
     },
     {
         id: 4,
-        text: "You walk in to the castle and in the middle of the hall is a lone throne. You get a deep, foreboding feeling the pit of your stomach as if something is watching you from the shadows. You can still walk and try and find somewhere else to sleep.",
-        options:[
+        text: "You arrive at the town square and people are running amok everywhere. Sounds of screams and howls bounce off the wall. You don't recognize some of the bodiies on the ground but you know that deep down more will follow unless you do something.",
+        options: [
             {
-                text: "Walk back towards the town",
-                nextText:7
+                text: "Readying yourself and your wooden sword, you charge head first into the center of town",
+                requireState: (currentState) => currentState.knight,
+                nextText: 6
             },
             {
-                text: "Explore the castle a bit",
-                nextText:8
-            },
-            {
-                text: "Ready your sword",
-                requireState: (currentState) => currentState.sword,
-                setState: {sword: true,},
-                nextText: 9
-            },
-            {
-                text: "Ready your shield",
-                requireState: (currentState) => currentState.shield,
-                setState:{shield: true,},
-                nextText: 10
-            }
+                text: "You climb on top of one of the nearby townhouse via some vine and a pit of luck. With the high ground in your favor, you ready your bow for a fight.",
+                requireState: (currentState) => currentState.archer,
+                nextText: 6,
+                requireState: (currentState) => currentState.archer,
+                nextText: 4  },
+
         ]
     },
     {
-        id: 5,
-        text: "You travel down to the town square and decide to try and find a room to rent. The town is mostly quiet and surprisly empty with only the innkeeper and a few other townspeople huddle around a table.",
-        options:[
-            {
-                text:"Walk over to the table",
-                nextText: 11,
-            },
-            {
-                text: 
-            }
-
-        ]
+        id: 5
     }
 ]
 
