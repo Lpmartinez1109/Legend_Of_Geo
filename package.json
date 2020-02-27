@@ -1,0 +1,20 @@
+{
+  "name": "Legend_Of_Geo",
+  "version": "1.0.0",
+  "description": "This is the Legend Of Geo, a text-based adventure game. The user will be able to go on choose your own adventure based on text options that will be presented to them.",
+  "main": "game.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lpmartinez1109/Legend_Of_Geo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lpmartinez1109/Legend_Of_Geo/issues"
+  },
+  "homepage": "https://github.com/Lpmartinez1109/Legend_Of_Geo#readme"
+}
