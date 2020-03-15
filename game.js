@@ -124,13 +124,49 @@ const textNodes = [
                 text: "You climb on top of one of the nearby townhouse via some vine and a pit of luck. With the high ground in your favor, you ready your bow for a fight.",
                 requireState: (currentState) => currentState.archer,
                 nextText: 6,
-                requireState: (currentState) => currentState.archer,
-                nextText: 4  },
+            },
+            {
+                text: "You don't want to want to keep using your magic and risk running out of power before you take on the monsters. You grabb your things and run to the center of town",
+                requireState: (currentState) => currentState.mage,
+                nextText: 6
+            },
+            {
+                text: "While there is plenty of loot around for the taking, you don't want to risk carrying all your treasure as you run into a monster. You check your knives and head towards the center of town",
+                requireState: (currentState) => currentState.rogue,
+                nextText: 6
+            }
 
         ]
     },
     {
-        id: 5
+        id: 5,
+        text: "You are not meant for combat, much less against living breathing monsters. It seems that fate has a different path in mind for you. A hulking brute of a creature appears before you, limbs handing from the sides of its mouth. It turns to face you, teeth bared and saliva dripping into the ground below. You have a limited amount of options in front of  you.",
+        options:[
+            {
+                text: "You grab a nearby tree branch and prepare to defend yourself. You might be able to stun the creature long enough to escape",
+                nextText: 7
+            },
+            {
+                text: "You feel your body freeze up as you try and will your body to move and run away",
+                nextText: 8
+            }
+        ]
+    },
+    {
+        id: 6,
+    },
+    {
+        id: 7,
+    },
+    {
+        id: 8,
+        text: "Your fear proves fatal as the creature leaps on top of you and sinks its teeth deep into your throat. You are still alive and the creature begins tearing into and devouring your flesh. Your only saving grace is that with the large loss of blood, you aren't log for this world.",
+        options:[
+            {
+                text: "You've Died",
+                nextText: 1
+            }
+        ]
     }
 ]
 
